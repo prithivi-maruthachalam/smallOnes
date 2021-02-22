@@ -64,7 +64,7 @@ while True:
         else:
             espeak.synth("Hello Sir. The time is" + str(current_time[3] - 12) + "hours" + str(current_time[4]) + "minutes")
 
-        dat = requests.get("http://api.openweathermap.org/data/2.5/weather?zip=641005,in&appid=fcc7cf88eaed21135af4a9e7d912de81").json()
+        dat = requests.get().json()#URL - Weather API
         data_weather = dat["weather"][0]["description"]
         print(data_weather)
         data_temp = dat["main"]["temp"]
